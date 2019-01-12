@@ -119,6 +119,7 @@ If an unexpected token is to be entered the error message is printed out as show
 For a graphical visualization of a parse tree  , please follow instruction below.	
  - Assign outputStyle 1	
  - Call parser function and copy the output then go to https://lautgesetz.com/latreex/
+ 
  [!Alt Text](https://github.com/onurpolattimur/G-Language-Lexer-Parser/blob/master/tree.png)
 
 
