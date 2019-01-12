@@ -1,3 +1,7 @@
+#  G-Language-Lexer-Parser
+
+G++ Lexer and Parser in common lisp.
+
 ##  Properties of G++ Language:
 G++ is a Gebze Technical University programming language with:
 
@@ -39,8 +43,15 @@ After the lexical analysis is performed the output is the tokens of the program.
 $ lexer(filename.gpp)
 ```
 
-	
+**Sample Input:**
 
+```sh
+(deffun sumup (x)
+    (if (equal x 0)
+    1
+    (+ x (sumup (- x 1))))
+)
+```
 
 
 	
