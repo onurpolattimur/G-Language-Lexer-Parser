@@ -120,7 +120,7 @@ For a graphical visualization of a parse tree  , please follow instruction below
  - Assign outputStyle 1	
  - Call parser function and copy the output then go to https://lautgesetz.com/latreex/
  
- [!Alt Text](https://raw.githubusercontent.com/onurpolattimur/G-Language-Lexer-Parser/master/tree.png)
+ <img  src="https://raw.githubusercontent.com/onurpolattimur/G-Language-Lexer-Parser/master/tree.png">
 
 
 **Usage:**
