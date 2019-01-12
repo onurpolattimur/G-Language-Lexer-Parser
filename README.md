@@ -2,7 +2,7 @@
 
 #  G++ Language Lexer & Parser
 
-G++ Lexer and Parser in common lisp.<br>
+G++ language Lexer and Parser in common lisp.<br>
 You can find the detailed explanations for lexer and parser below.<br>
 
 ##  Properties of G++ Language:
