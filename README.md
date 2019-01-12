@@ -2,6 +2,8 @@
 #  G++ Language Lexer & Parser
 
 G++ Lexer and Parser in common lisp.
+You can find the detailed explanations for lexer and parser below.
+Cheers.
 
 ##  Properties of G++ Language:
 G++ is a Gebze Technical University programming language with:
@@ -117,9 +119,12 @@ If an unexpected token is to be entered the error message is printed out as show
 For a graphical visualization of a parse tree  , please follow instruction below.	
  - Assign outputStyle 1	
  - Call parser function and copy the output then go to https://lautgesetz.com/latreex/
+ [!Alt Text](https://github.com/onurpolattimur/G-Language-Lexer-Parser/blob/master/tree.png)
 
 
 **Usage:**
+
+To tokenize the program you wish to parse, you may use the lexer which is can be found in this repositories.
 ```sh
 $ parser(tokenList)
 ```
