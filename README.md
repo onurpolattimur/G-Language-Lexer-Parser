@@ -54,9 +54,11 @@ $ lexer(filename.gpp)
 ```
 **Sample Output:**
 ```sh
-(("operator" "(") ("keyword" "deffun") ("identifier" "sumup") ("operator" "(") ("identifier" "x") ("operator" ")") ("operator" "(") ("keyword" "if") ("operator" "(")("keyword" "equal") 
-("identifier" "x") ("integer" "0") ("operator" ")") ("integer" "1") ("operator" "(") 
-("operator" "+") ("identifier" "x") ("operator" "(")("identifier" "sumup") ("operator" "(") ("operator" "-") ("identifier" "x") ("integer" "1") ("operator" ")") ("operator" ")") ("operator" ")") ("operator" ")") ("operator" ")"))
+(("operator" "(") ("keyword" "deffun") ("identifier" "sumup") ("operator" "(") ("identifier" "x")
+("operator" ")") ("operator" "(") ("keyword" "if") ("operator" "(")("keyword" "equal") ("identifier" "x") 
+("integer" "0") ("operator" ")") ("integer" "1") ("operator" "(") ("operator" "+") ("identifier" "x") 
+("operator" "(")("identifier" "sumup") ("operator" "(") ("operator" "-") ("identifier" "x") ("integer" "1") 
+("operator" ")") ("operator" ")") ("operator" ")") ("operator" ")") ("operator" ")"))
 ```
 
 	
