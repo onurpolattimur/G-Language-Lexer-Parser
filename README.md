@@ -1,3 +1,4 @@
+
 #  G++ Language Lexer & Parser
 
 G++ Lexer and Parser in common lisp.
@@ -20,6 +21,43 @@ G++ is a Gebze Technical University programming language with:
 	 - `IntegerValue -> [-]*[1-9]*[0-9]+`
 	 - `Id 		  -> [a-zA-Z]+`
 	
+
+
+##  Grammer rules of G++ Language:
+
+
+     - START -> INPUT
+     
+     - INPUT -> EXPI | EXPLISTI 
+     
+     - EXPI -> (set ID EXPI) 
+     - EXPI -> (+ EXPI EXPI) 
+     - EXPI -> (- EXPI EXPI) 
+     - EXPI -> (* EXPI EXPI) 
+     - EXPI -> (/ EXPI EXPI) 
+     - EXPI -> ID | (ID EXPLISTI) | VALUES 
+     - EXPI -> (deffun ID IDLIST EXPLISTI) 
+     - EXPI -> (ID EXPLISTI) 
+     - EXPI -> (defvar ID EXPI) 
+     - EXPI -> (set ID EXPI) 
+     - EXPI -> (if EXPB EXPLISTI) 
+     - EXPI -> (if EXPB EXPLISTI EXPLISTI) 
+     - EXPI -> (while (EXPB) EXPLISTI) 
+     - EXPI -> (for (ID EXPI EXPI) EXPLISTI) 
+      
+     - EXPB -> (and EXPB EXPB) 
+     - EXPB -> (or EXPB EXPB) 
+     - EXPB -> (not EXPB) 
+     - EXPB -> (equal EXPB EXPB) 
+     - EXPB -> (equal EXPI EXPI) 
+     - EXPB -> BinaryValue 
+      
+     - EXPLISTI -> EXPI | (concat EXPLISTI EXPLISTI) | (append EXPI EXPLISTI) | null | ‘( VALUES ) | ‘() 
+      
+     - VALUES -> VALUES IntegerValue | IntegerValue 
+      
+     - IDLIST -> ID | (IDLIST) | ID IDLIST
+
 
 ## Lexer
 
