@@ -106,7 +106,7 @@ Parser written in CommonLisp. | parser.cl
 
 All the functions implemented are recursive and obey the principles of Functional Programming.
 
-For a given description/grammer of the G++ language the parser implemented parses a given tokenized G++ program.
+For a given description/grammer of the G++ language the parser implemented parses a given tokenized G++ program.<br>
 To test the program you should invoke function parser("tokenized list") which takes tokenized G++ program. 
 The output of the function is a parse tree of a given program. The output is also written to a file. 
 The code includes detailed explanation. 
