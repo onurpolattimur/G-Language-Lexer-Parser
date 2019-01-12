@@ -1,9 +1,8 @@
 
 #  G++ Language Lexer & Parser
 
-G++ Lexer and Parser in common lisp.
-You can find the detailed explanations for lexer and parser below.
-Cheers.
+G++ Lexer and Parser in common lisp.<br>
+You can find the detailed explanations for lexer and parser below.<br>
 
 ##  Properties of G++ Language:
 G++ is a Gebze Technical University programming language with:
