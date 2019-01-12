@@ -92,11 +92,99 @@ $ lexer(filename.gpp)
 ```
 **Sample Output:**
 ```sh
-(("operator" "(") ("keyword" "deffun") ("identifier" "sumup") ("operator" "(") ("identifier" "x")
-("operator" ")") ("operator" "(") ("keyword" "if") ("operator" "(")("keyword" "equal") ("identifier" "x") 
-("integer" "0") ("operator" ")") ("integer" "1") ("operator" "(") ("operator" "+") ("identifier" "x") 
-("operator" "(")("identifier" "sumup") ("operator" "(") ("operator" "-") ("identifier" "x") ("integer" "1") 
-("operator" ")") ("operator" ")") ("operator" ")") ("operator" ")") ("operator" ")"))
+("OPERATOR" "(") ("KEYWORD" "deffun") ("IDENTIFIER" "sumup") ("OPERATOR" "(") ("IDENTIFIER" "x")
+("OPERATOR" ")") ("OPERATOR" "(") ("KEYWORD" "if") ("OPERATOR" "(") ("KEYWORD" "equal")("IDENTIFIER" "x")
+("INTEGER" "0") ("OPERATOR" ")") ("INTEGER" "1") ("OPERATOR" "(") ("OPERATOR" "+") ("IDENTIFIER" "x")
+("OPERATOR" "(") ("IDENTIFIER" "sumup") ("OPERATOR" "(") ("OPERATOR" "-") ("IDENTIFIER" "x") ("INTEGER" "1")
+("OPERATOR" ")") ("OPERATOR" ")") ("OPERATOR" ")") ("OPERATOR" ")") ("OPERATOR" ")"))
 ```
 
-	
+## Parser
+Parser written in CommonLisp.
+
+All the functions implemented are recursive and obey the principles of Functional Programming.
+
+For a given description/grammer of the G++ language the parser implemented parses a given tokenized G++ program.
+
+To test the program you should invoke function parser("tokenized list") which takes tokenized G++ program. The output of the function is a parse tree of a given program. The output is also written to a file. 
+The code includes detailed explanation. For a graphical visualization of a parse tree you may use the guide provided in the comments at the very beginning of the code.
+
+**Usage:**
+```sh
+$ parser(tokenList)
+```
+
+**Sample Input:**
+
+```sh
+(setq tokenList '(
+("OPERATOR" "(") ("KEYWORD" "deffun") ("IDENTIFIER" "sumup") ("OPERATOR" "(") ("IDENTIFIER" "x")
+("OPERATOR" ")") ("OPERATOR" "(") ("KEYWORD" "if") ("OPERATOR" "(") ("KEYWORD" "equal")("IDENTIFIER" "x")
+("INTEGER" "0") ("OPERATOR" ")") ("INTEGER" "1") ("OPERATOR" "(") ("OPERATOR" "+") ("IDENTIFIER" "x")
+("OPERATOR" "(") ("IDENTIFIER" "sumup") ("OPERATOR" "(") ("OPERATOR" "-") ("IDENTIFIER" "x") ("INTEGER" "1")
+("OPERATOR" ")") ("OPERATOR" ")") ("OPERATOR" ")") ("OPERATOR" ")") ("OPERATOR" ")"))
+)
+```
+**Sample Output:**
+```sh
+|START
+|_INPUT
+|__EXPI
+|___(
+|___deffun
+|___ID
+|____sumup
+|___IDLIST
+|____(
+|____IDLIST
+|_____ID
+|______x
+|____)
+|___EXPLISTI
+|____EXPI
+|_____(
+|_____if
+|_____EXPB
+|______(
+|______equal
+|______EXPI
+|_______ID
+|________x
+|______EXPI
+|_______VALUES
+|________IntegerValue
+|_________0
+|______)
+|_____EXPLISTI
+|______EXPI
+|_______VALUES
+|________IntegerValue
+|_________1
+|_____EXPLISTI
+|______EXPI
+|_______(
+|_______+
+|_______EXPI
+|________ID
+|_________x
+|_______EXPI
+|________(
+|________ID
+|_________sumup
+|________EXPLISTI
+|_________EXPI
+|__________(
+|__________-
+|__________EXPI
+|___________ID
+|____________x
+|__________EXPI
+|___________VALUES
+|____________IntegerValue
+|_____________1
+|__________)
+|________)
+|_______)
+|_____)
+|___)
+```
