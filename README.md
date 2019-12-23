@@ -94,7 +94,7 @@ $ lexer(filename.gpp)
 ```
 **Sample Output:**
 ```sh
-("OPERATOR" "(") ("KEYWORD" "deffun") ("IDENTIFIER" "sumup") ("OPERATOR" "(") ("IDENTIFIER" "x")
+(("OPERATOR" "(") ("KEYWORD" "deffun") ("IDENTIFIER" "sumup") ("OPERATOR" "(") ("IDENTIFIER" "x")
 ("OPERATOR" ")") ("OPERATOR" "(") ("KEYWORD" "if") ("OPERATOR" "(") ("KEYWORD" "equal")("IDENTIFIER" "x")
 ("INTEGER" "0") ("OPERATOR" ")") ("INTEGER" "1") ("OPERATOR" "(") ("OPERATOR" "+") ("IDENTIFIER" "x")
 ("OPERATOR" "(") ("IDENTIFIER" "sumup") ("OPERATOR" "(") ("OPERATOR" "-") ("IDENTIFIER" "x") ("INTEGER" "1")
